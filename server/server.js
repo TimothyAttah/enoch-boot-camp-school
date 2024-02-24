@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get('/', (req, res) => {
-  res.send('Hello NICA NIGERIA');
+  res.send('Welcome To Enoch Louis Coding Bootcamp School');
 });
 
 app.use('/api/auth', authRouters);

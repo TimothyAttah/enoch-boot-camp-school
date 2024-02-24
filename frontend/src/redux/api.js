@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-export const baseURL = 'http://localhost:8080/api';
+// export const baseURL = 'http://localhost:8080/api';
+export const baseURL = 'https://enoch-boot-camp-school-sigma.vercel.app/';
 
 const API = axios.create({ baseURL: baseURL });
 
