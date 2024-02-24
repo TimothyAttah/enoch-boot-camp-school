@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script defer>
+      // window.onload = function () {
+      //   // Add the loading-text class to the logo on page load
+      //   document?.querySelector('.logo p').classList?.add('loading-text');
+      // };
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var scrollToTopButton = document.getElementById('scrollToTop');
+
+        window.addEventListener('scroll', function () {
+          if (
+            document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20
+          ) {
+            scrollToTopButton.style.display = 'block';
+          } else {
+            scrollToTopButton.style.display = 'none';
+          }
+        });
+
+        scrollToTopButton.addEventListener('click', function () {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        });
+      });
+    </script>
+    <script>
+      function closeNavbar() {
+        if ($(window).width() < 992) {
+          // Close the navbar on small and medium screens (adjust the breakpoint as needed)
+          $('.navbar-toggler').click();
+        }
+      }
+    </script>
+
+    <meta charset="utf-8" />
+    <!-- <link rel="icon" href="logo2.png" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <meta name="theme-color" content="#000000" /> -->
+    <!-- <meta name="description" content=" NICA PAGEANT ...not just beauty" /> -->
+    <link rel="apple-touch-icon" href="logo2.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="utf-8" />
+    <!-- <meta name='Author' description='Emmanuel, omotayo'> -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/styles6.css" />
+    <link rel="icon" type="image/icon" href="icons/el-1.png" />
+    <title>Code2ChangeYourWorld</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <div id="modal"></div>
+    <div class="scroll-to-top" id="scrollToTop">&#8593;</div>
+
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
