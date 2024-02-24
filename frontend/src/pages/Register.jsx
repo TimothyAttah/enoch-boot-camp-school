@@ -5,7 +5,8 @@ import { toast } from 'react-toastify';
 
 const Register = () => {
   const formData = {
-    fullName: '',
+    firstname: '',
+    lastname: '',
     gender: '',
     phoneNumber: '',
     dateOfBirth: '',
@@ -18,7 +19,8 @@ const Register = () => {
   const dispatch = useDispatch();
 
   const {
-    fullName,
+    firstname,
+    lastname,
     gender,
     phoneNumber,
     dateOfBirth,
@@ -71,8 +73,6 @@ const Register = () => {
       toast.error('Password does not match.');
     } else {
       dispatch(actions.registerUser(userData));
-
-      console.log(userData);
     }
   };
   return (
@@ -84,12 +84,21 @@ const Register = () => {
             {/* <p> // Display error messages here</p> */}
           </div>
 
-          <label htmlFor='fullName'>Full Name:</label>
+          <label htmlFor='firstname'>First Name:</label>
           <input
             type='text'
-            name='fullName'
+            name='firstname'
             // required
-            value={fullName}
+            value={firstname}
+            onChange={handleInputData}
+          />
+
+          <label htmlFor='lastname'>Last Name:</label>
+          <input
+            type='text'
+            name='lastname'
+            // required
+            value={lastname}
             onChange={handleInputData}
           />
 

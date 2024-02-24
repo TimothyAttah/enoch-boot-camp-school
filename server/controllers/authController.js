@@ -6,7 +6,8 @@ const authControllers = {
   register: async (req, res) => {
     try {
       const {
-        fullName,
+        firstname,
+        lastname,
         gender,
         phoneNumber,
         dateOfBirth,
@@ -21,7 +22,8 @@ const authControllers = {
 
       const hashPassword = await bcrypt.hash(password, 12);
       const newUser = await User({
-        fullName,
+        firstname,
+        lastname,
         gender,
         phoneNumber,
         dateOfBirth,

@@ -1,6 +1,7 @@
 export const validRegister = async (req, res, next) => {
   const {
-    fullName,
+    firstname,
+    lastname,
     gender,
     phoneNumber,
     dateOfBirth,
@@ -9,8 +10,11 @@ export const validRegister = async (req, res, next) => {
     password,
   } = req.body;
 
-  if (!fullName)
-    return res.status(400).json({ msg: 'Please enter your full name.' });
+  if (!firstname)
+    return res.status(400).json({ msg: 'Please enter your first name.' });
+
+  if (!lastname)
+    return res.status(400).json({ msg: 'Please enter your last name.' });
 
   if (!gender)
     return res.status(400).json({ msg: 'Please enter your gender.' });
