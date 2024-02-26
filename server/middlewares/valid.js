@@ -21,8 +21,6 @@ export const validRegister = async (req, res, next) => {
 
   if (!phoneNumber) {
     return res.status(400).json({ msg: 'Please enter your phone number.' });
-  } else if (!validPhone(phoneNumber)) {
-    return res.status(400).json({ msg: 'Phone number format is incorrect.' });
   }
 
   if (!dateOfBirth)
