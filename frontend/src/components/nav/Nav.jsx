@@ -19,98 +19,94 @@ const Nav = () => {
   };
   return (
     <div className='offcanvas-body'>
-      <ul className='navbar-nav justify-content-center nav-underline flex-grow-1 ps-lg-2 ms-lg-4'>
-        <li className='nav-item'>
-          <a
-            href='/'
-            className='nav-link active'
-            aria-current='page'
-            onClick={() => closeNavbar()}
-            // onClick='closeNavbar()'
-          >
-            Home
-          </a>
-        </li>
-        <li className='nav-item'>
-          <a
-            className='nav-link'
-            href='#gains'
-            // to='#gains'
-            onClick={() => closeNavbar()}
-            // onClick='closeNavbar()'
-          >
-            Gains
-          </a>
-        </li>
-        <li className='nav-item'>
-          <a
-            className='nav-link'
-            href='#Pricing'
-            // to='#Pricing'
-            onClick={() => closeNavbar()}
-          >
-            Pricing
-          </a>
-        </li>
+      {!user ? (
+        <>
+          <ul className='navbar-nav justify-content-center nav-underline flex-grow-1 ps-lg-2 ms-lg-4'>
+            <li className='nav-item'>
+              <a
+                href='/'
+                className='nav-link active'
+                aria-current='page'
+                onClick={() => closeNavbar()}
+                // onClick='closeNavbar()'
+              >
+                Home
+              </a>
+            </li>
+            <li className='nav-item'>
+              <a
+                className='nav-link'
+                href='#gains'
+                // to='#gains'
+                onClick={() => closeNavbar()}
+                // onClick='closeNavbar()'
+              >
+                Gains
+              </a>
+            </li>
+            <li className='nav-item'>
+              <a
+                className='nav-link'
+                href='#Pricing'
+                // to='#Pricing'
+                onClick={() => closeNavbar()}
+              >
+                Pricing
+              </a>
+            </li>
 
-        <li className='nav-item'>
-          <a
-            className='nav-link'
-            href='#courses'
-            // to='#courses'
-            //onClick={()=> closeNavbar()}
-          >
-            Courses
-          </a>
-        </li>
-        <li className='nav-item'>
-          <a
-            className='nav-link'
-            href='#about_us'
-            // to='#about_us'
-            //onClick={()=> closeNavbar()}
-          >
-            About Us
-          </a>
-        </li>
-      </ul>
-      {user ? (
-        <form className='d-flex cols-md-4 px-lg-auto' role='search'>
-          <button
-            className='btn btn-danger rounded-pill'
-            type='button'
-            onClick={handleLogout}
-          >
-            Logout
-          </button>
-        </form>
-      ) : (
-        <form className='d-flex cols-md-4 px-lg-auto' role='search'>
-          <a
-            href='#register'
-            // to='#register'
-            // href='index.php#register'
-            //onClick={()=> closeNavbar()}
-          >
-            <button
-              className='btn btn-danger rounded-pill'
-              type='button'
-              // data-bs-toggle='modal'
-              // data-bs-target='#exampleModal'
-              // data-bs-whatever='@getbootstrap'
+            <li className='nav-item'>
+              <a
+                className='nav-link'
+                href='#courses'
+                // to='#courses'
+                //onClick={()=> closeNavbar()}
+              >
+                Courses
+              </a>
+            </li>
+            <li className='nav-item'>
+              <a
+                className='nav-link'
+                href='#about_us'
+                // to='#about_us'
+                //onClick={()=> closeNavbar()}
+              >
+                About Us
+              </a>
+            </li>
+          </ul>
+          <form className='d-flex cols-md-4 px-lg-auto' role='search'>
+            <a
+              href='#register'
+              // to='#register'
+              // href='index.php#register'
+              //onClick={()=> closeNavbar()}
             >
-              Register
+              <button
+                className='btn btn-danger rounded-pill'
+                type='button'
+                // data-bs-toggle='modal'
+                // data-bs-target='#exampleModal'
+                // data-bs-whatever='@getbootstrap'
+              >
+                Register
+              </button>
+            </a>
+            <button
+              className='btn btn-primary rounded-pill'
+              type='button'
+              data-bs-toggle='modal'
+              data-bs-target='#loginModal'
+            >
+              Login
             </button>
-          </a>
-          <button
-            className='btn btn-primary rounded-pill'
-            type='button'
-            data-bs-toggle='modal'
-            data-bs-target='#loginModal'
-          >
-            Login
-          </button>
-        </form>
+          </form>
+        </>
+      ) : (
+        <a href='/' onClick={handleLogout}>
+          <button>Logout</button>
+        </a>
       )}
     </div>
   );

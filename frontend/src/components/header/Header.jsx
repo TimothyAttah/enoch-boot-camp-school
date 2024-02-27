@@ -14,7 +14,7 @@ export const Header = () => {
   return (
     <div>
       <Link className='logo navbar-brand' to='#'>
-        <Logo className='loading-text'>
+        <Logo>
           <b>Code2ChangeYourWorld</b>
         </Logo>
       </Link>
@@ -22,7 +22,7 @@ export const Header = () => {
         <nav className='navbar navbar-expand-lg bg-body-tertiary fixed-top border-bottom border-body bg-primary'>
           <div className='container'>
             <Link className='logo navbar-brand' to='#'>
-              <Logo className='loading-text'>
+              <Logo>
                 <b>Code2ChangeYourWorld</b>
               </Logo>
             </Link>

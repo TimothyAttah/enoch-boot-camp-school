@@ -1,5 +1,11 @@
 import React from 'react';
 import { user } from '../components/Authentication';
+import styled from 'styled-components';
+
+const H2 = styled.h2`
+  /* display: inline-block; */
+  text-transform: capitalize;
+`;
 
 const Dashboard = () => {
   return (
@@ -7,9 +13,9 @@ const Dashboard = () => {
       <div className='row'>
         <div className='col-lg-12 mx-auto text-center'>
           <div>
-            <h2 className='my-element'>
+            <H2 className='my-element'>
               Welcome, {user?.firstname} {user?.lastname}
-            </h2>
+            </H2>
             <div>
               <p className='mb-3'>
                 <mark>
