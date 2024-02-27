@@ -7,7 +7,9 @@ const Dashboard = () => {
       <div className='row'>
         <div className='col-lg-12 mx-auto text-center'>
           <div>
-            <h2 className='my-element'>Welcome, {user?.fullName}</h2>
+            <h2 className='my-element'>
+              Welcome, {user?.firstname} {user?.lastname}
+            </h2>
             <div>
               <p className='mb-3'>
                 <mark>
