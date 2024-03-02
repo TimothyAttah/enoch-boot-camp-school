@@ -3,7 +3,11 @@ const { ObjectId } = mongoose.Schema.Types;
 
 const PaymentSchema = new mongoose.Schema(
   {
-    fullName: {
+    firstname: {
+      type: String,
+      required: true,
+    },
+    lastname: {
       type: String,
       required: true,
     },

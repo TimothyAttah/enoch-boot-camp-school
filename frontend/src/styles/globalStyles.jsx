@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle, css } from 'styled-components';
 // import { theme } from '../themes';
 
 export const GlobalStyle = createGlobalStyle`
@@ -179,4 +179,31 @@ input {
         }
 
 
+`;
+
+export const Container = styled.div`
+  /* max-width: 1170px; */
+  max-width: 1500px;
+  margin: auto;
+  padding: 0 15px;
+  /* border: 2px dashed blue; */
+
+  ${(props) =>
+    props.primary &&
+    css`
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    `}
+
+  ${(props) =>
+    props.form &&
+    css`
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* background-color: var(--main-color); */
+      margin-top: 150px;
+    `}
 `;

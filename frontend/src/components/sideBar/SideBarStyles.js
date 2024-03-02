@@ -8,50 +8,42 @@ export const SideBar = styled(motion.div)`
   top: 0;
   width: 300px;
   height: 100vh;
-  background: ${({ theme }) => theme.color.bgLight};
-  color: ${({ theme }) => theme.color.textColor};
+  background: white;
+  color: #000;
   padding: 10px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  /* box-shadow: 12px 12px 12px rgba(0, 0, 0, #000); */
   box-shadow: 7px 7px 5px 0 rgba(50, 50, 50, 0.75);
-  z-index: 99;
+  z-index: 1144;
 `;
 
 export const SideBarNavLinks = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  color: ${({ theme }) => theme.color.textColor2};
+  /* gap: 20px; */
+  color: #000;
   margin-top: 80px;
 
   a.active {
     /* background: rgba(255, 255, 255, 0.05); */
-    background: var(--main-color);
+
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 30px;
-    color: ${({ theme }) => theme.color.textColor};
   }
 
   a {
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     cursor: pointer;
     padding: 10px 0;
     border-radius: 5px;
-    font-size: 24px;
+    font-size: 20px;
     text-transform: uppercase;
-    color: ${({ theme }) => theme.color.textDark};
+    color: #000;
     transition: 0.3s ease-in-out all;
-
-    :hover {
-      background-color: var(--main-color);
-      color: ${({ theme }) => theme.color.textLight};
-      border-radius: 30px;
-    }
   }
 `;
 
@@ -62,13 +54,17 @@ export const CloseSideBarIcon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${({ theme }) => theme.color.textDark};
+  color: #000;
   font-size: 20px;
 
   svg {
     font-weight: normal;
     cursor: pointer;
   }
+`;
+
+export const LogoutBtn = styled.div`
+  margin-top: 80px;
 `;
 
 export const Button = styled.div`

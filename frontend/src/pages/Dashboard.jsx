@@ -17,12 +17,23 @@ const Dashboard = () => {
               Welcome, {user?.firstname} {user?.lastname}
             </H2>
             <div>
-              <p className='mb-3'>
+              {/* <p class='mb-3'>
                 <mark>
                   But Your Registration is not yet complete until you Pay
                 </mark>
                 .
                 <a href='https://paystack.com/pay/or7szmdkig'>
+                  <button>
+                    Hurry. Click here Now to pay and secure your chance.
+                  </button>
+                </a>
+              </p> */}
+              <p className='mb-3'>
+                <mark>
+                  But Your Registration is not yet complete until you Pay
+                </mark>
+
+                <a href='/payment'>
                   <button>
                     Hurry. Click here Now to pay and secure your chance.
                   </button>

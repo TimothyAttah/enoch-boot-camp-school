@@ -104,9 +104,18 @@ const Nav = () => {
           </form>
         </>
       ) : (
-        <a href='/' onClick={handleLogout}>
-          <button>Logout</button>
-        </a>
+        <div
+          style={{
+            width: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'flex-end',
+          }}
+        >
+          <a href='/' onClick={handleLogout}>
+            <button>Logout</button>
+          </a>
+        </div>
       )}
     </div>
   );

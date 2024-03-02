@@ -9,7 +9,7 @@ class PaymentService {
   startPayment(data) {
     return new Promise(async (resolve, reject) => {
       try {
-        const form = _.pick(data, ['amount', 'email', 'name']);
+        const form = _.pick(data, ['amount', 'email', 'firstname', 'lastname']);
         form.metadata = {
           name: form.name,
         };
@@ -44,8 +44,17 @@ class PaymentService {
           const response = JSON.parse(body);
           const { reference, amount, status } = response.data;
           const { email } = response.data.customer;
-          const name = response.data.metadata.name;
-          const newPayment = { reference, amount, email, name, status };
+          const firstname = response.data.metadata.firstname;
+          const lastname = response.data.metadata.lastname;
+
+          const newPayment = {
+            reference,
+            amount,
+            email,
+            firstname,
+            lastname,
+            status,
+          };
           const payment = await Payment.create(newPayment).populate('paidBy');
           return resolve(payment);
         });
